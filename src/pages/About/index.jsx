@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
@@ -18,6 +20,13 @@ import {
 } from "./style";
 
 function About() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <>
       <Navbar />
