@@ -131,7 +131,7 @@ export const fighters = [
 
   {
     id: 8,
-    name: "Rafale",
+    name: "Dassault Rafale",
     country: "France",
     generation: "4.5 Generation",
     role: "Multirole",

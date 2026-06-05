@@ -4,6 +4,7 @@ export const Container = styled.section`
   min-height: calc(100vh - 70px);
 
   padding: 2rem 1rem;
+  scroll-margin-top: 70px;
 
   display: flex;
   align-items: center;
@@ -37,6 +38,12 @@ export const TextContent = styled.div`
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 1rem;
+  }
+
+  .quote {
+    color: var(--primary-hover);
+    font-style: italic;
+    font-weight: 600;
   }
 
   @media (min-width: 768px) {

@@ -9,8 +9,14 @@ import {
 } from "./style";
 
 function Hero() {
+  const handleExploreAircraft = () => {
+    document.getElementById("aircraft")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <Container id="home">
+    <Container id="hero">
       <Content>
         <TextContent>
           <h1>Modern Fighter Jets</h1>
@@ -24,7 +30,15 @@ function Hero() {
             dominance platform.
           </p>
 
-          <Button>
+          <p className="quote">
+            "I feel the need... the need for speed."
+          </p>
+
+          <p className="quote">
+            "It's not the plane, it's the pilot."
+          </p>
+
+          <Button onClick={handleExploreAircraft} type="button">
             Explore Aircraft
           </Button>
         </TextContent>

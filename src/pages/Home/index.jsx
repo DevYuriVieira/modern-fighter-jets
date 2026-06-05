@@ -49,15 +49,15 @@ function Home() {
             </FilterButton>
 
             <FilterButton
-              $active={filter === "4.5"}
-              onClick={() => setFilter("4.5")}
+              $active={filter === "4.5 Generation"}
+              onClick={() => setFilter("4.5 Generation")}
             >
               4.5 Gen
             </FilterButton>
 
             <FilterButton
-              $active={filter === "5th"}
-              onClick={() => setFilter("5th")}
+              $active={filter === "5th Generation"}
+              onClick={() => setFilter("5th Generation")}
             >
               5th Gen
             </FilterButton>

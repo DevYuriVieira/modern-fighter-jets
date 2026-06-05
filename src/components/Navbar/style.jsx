@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 
 export const Container = styled.nav`
@@ -31,25 +33,30 @@ export const Content = styled.div`
   }
 `;
 
-export const Logo = styled.h2`
-  color: var(--text);
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-
-  span {
-    color: var(--primary);
-  }
+export const Logo = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
 
   transition: 0.3s ease;
 
+  img {
+    display: block;
+    width: auto;
+    height: 48px;
+    max-width: 220px;
+    object-fit: contain;
+  }
+
   &:hover {
-    opacity: 0.85;
+    opacity: 0.88;
     transform: translateY(-1px);
   }
 
   @media (min-width: 768px) {
-    font-size: 1.4rem;
+    img {
+      height: 56px;
+    }
   }
 `;
 
