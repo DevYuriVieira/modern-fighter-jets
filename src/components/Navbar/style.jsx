@@ -112,7 +112,6 @@ export const Menu = styled.div`
     width: 100%;
   }
 
-  /* 🔥 REMOVE O BRANCO DO FOCO/CLICK */
   button:focus,
   button:active {
     outline: none;

@@ -18,29 +18,19 @@ function FighterCard({ fighter }) {
 
   return (
     <Card>
-      <Image
-        src={fighter.image}
-        alt={fighter.name}
-      />
+      <Image src={fighter.image} alt={fighter.name} />
 
       <Content>
         <Header>
           <h3>{fighter.name}</h3>
-
           <p>{fighter.country}</p>
         </Header>
 
         <Badge>{fighter.generation}</Badge>
 
         <Actions>
-          <Button
-            onClick={() =>
-              setShowDetails(!showDetails)
-            }
-          >
-            {showDetails
-              ? "Hide Details"
-              : "Show Details"}
+          <Button onClick={() => setShowDetails(!showDetails)}>
+            {showDetails ? "Hide Details" : "Show Details"}
           </Button>
 
           <FavoriteButton
@@ -55,28 +45,23 @@ function FighterCard({ fighter }) {
         {showDetails && (
           <Details>
             <p>
-              <strong>Role:</strong>{" "}
-              {fighter.role}
+              <strong>Role:</strong> {fighter.role}
             </p>
 
             <p>
-              <strong>Manufacturer:</strong>{" "}
-              {fighter.manufacturer}
+              <strong>Manufacturer:</strong> {fighter.manufacturer}
             </p>
 
             <p>
-              <strong>Maximum Speed:</strong>{" "}
-              {fighter.speed}
+              <strong>Maximum Speed:</strong> {fighter.speed}
             </p>
 
             <p>
-              <strong>First Flight:</strong>{" "}
-              {fighter.firstFlight}
+              <strong>First Flight:</strong> {fighter.firstFlight}
             </p>
 
             <p>
-              <strong>Introduced:</strong>{" "}
-              {fighter.introduced}
+              <strong>Introduced:</strong> {fighter.introduced}
             </p>
 
             <p>{fighter.description}</p>

@@ -31,15 +31,14 @@ function About() {
             </HeroTitle>
 
             <HeroSubtitle>
-              A React-based interactive platform showcasing
-              next-generation military aircraft and modern air combat technology.
+              A React app about modern fighter jets, built to explore the aircraft and the tech behind them.
             </HeroSubtitle>
           </HeroSection>
 
           <StatsContainer>
             <StatCard>
-              <h3>11</h3>
-              <span>Aircraft Featured</span>
+              <h3>10</h3>
+              <span>Aircraft in Database</span>
             </StatCard>
 
             <StatCard>
@@ -62,11 +61,11 @@ function About() {
             <SectionTitle>Project Overview</SectionTitle>
 
             <Text>
-              Modern Fighter Jets is an interactive web application designed to explore some of the most advanced combat aircraft in modern military aviation.
+              Modern Fighter Jets is a small interactive app that explores some of the most advanced combat aircraft in modern military aviation.
             </Text>
 
             <Text>
-              The project features aircraft such as the F-22 Raptor, F-35 Lightning II, F-15EX Eagle II, F/A-18 Super Hornet, Su-57 Felon, J-20 Mighty Dragon, Rafale, Eurofighter Typhoon, MiG-35 and Gripen E.
+              The project features aircraft such as the F-22 Raptor, F-35 Lightning II, F-15EX Eagle II, F/A-18 Super Hornet, Su-57 Felon, J-20 Mighty Dragon, Dassault Rafale, Eurofighter Typhoon, MiG-35 and Gripen E.
             </Text>
 
             <Text>
@@ -78,15 +77,15 @@ function About() {
             <SectionTitle>Development Focus</SectionTitle>
 
             <Text>
-              This project was built as a React learning experience focused on component architecture, reusable UI patterns and state-driven interfaces.
+              I built this project as a React practice piece focused on component structure, reusable UI patterns and state-driven interfaces.
             </Text>
 
             <Text>
-              Features like favoriting aircraft, dynamic rendering and responsive layout demonstrate practical frontend development concepts used in real applications.
+              The favorite toggle, detail view and responsive layout show the main frontend concepts in a simple way.
             </Text>
 
             <Text>
-              A highlight of the project is the Featured Aircraft section, centered on the F-47 concept representing next-generation air dominance design.
+              A highlight of the project is the Featured Aircraft section, centered on the F-47 concept and its future-focused design.
             </Text>
           </SectionBlock>
 
