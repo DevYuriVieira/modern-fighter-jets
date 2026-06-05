@@ -1,4 +1,4 @@
-import f47 from "../../assets/images/F-47.jpg";
+import f47 from "../../assets/Images/F-47.jpg";
 
 import {
   Container,

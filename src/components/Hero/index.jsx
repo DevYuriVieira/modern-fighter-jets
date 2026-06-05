@@ -1,4 +1,4 @@
-import f14 from "../../assets/images/F-14.jpg";
+import f14 from "../../assets/Images/F-14.jpg";
 
 import {
   Container,
