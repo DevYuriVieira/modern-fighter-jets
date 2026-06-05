@@ -2,10 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   min-height: calc(100vh - 70px);
-
   padding: 2rem 1rem;
   scroll-margin-top: 70px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +12,6 @@ export const Container = styled.section`
 export const Content = styled.div`
   width: 100%;
   max-width: 1200px;
-
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -56,11 +53,8 @@ export const TextContent = styled.div`
 export const Button = styled.button`
   background: var(--primary);
   color: white;
-
   padding: 1rem 2rem;
-
   border-radius: 8px;
-
   transition: 0.3s;
 
   &:hover {

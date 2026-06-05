@@ -56,7 +56,6 @@ export const FilterButton = styled.button`
 export const Grid = styled.div`
   display: grid;
   gap: 2rem;
-
   grid-template-columns: 1fr;
 
   @media (min-width: 768px) {
