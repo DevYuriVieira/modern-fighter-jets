@@ -45,11 +45,10 @@ function FighterCard({ fighter }) {
 
           <FavoriteButton
             $favorite={favorite}
-            onClick={() =>
-              setFavorite(!favorite)
-            }
+            onClick={() => setFavorite(!favorite)}
+            aria-label="Favorite aircraft"
           >
-            {favorite ? "★" : "☆"}
+            ★
           </FavoriteButton>
         </Actions>
 

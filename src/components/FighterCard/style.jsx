@@ -92,18 +92,20 @@ export const Button = styled.button`
 `;
 
 export const FavoriteButton = styled.button`
-  width: 50px;
+  background: transparent;
 
-  border-radius: 8px;
+  border: none;
 
-  background: ${({ $favorite }) =>
-    $favorite ? "var(--primary)" : "var(--surface)"};
+  font-size: 1.6rem;
 
-  border: 1px solid var(--border);
+  color: ${({ $favorite }) =>
+    $favorite ? "#FFD700" : "#6B7280"};
 
-  color: white;
+  transition: all 0.3s ease;
 
-  transition: 0.3s;
+  &:hover {
+    transform: scale(1.15);
+  }
 `;
 
 export const Details = styled.div`

@@ -22,14 +22,25 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    font-family: 'Segoe UI', sans-serif;
-    background: var(--background);
-    color: var(--text);
+    min-height:100vh;
+    font-family:'Segoe UI', sans-serif;
+    background:var(--background);
+    color:var(--text);
+    overflow-x:hidden;
+  }
+
+  #root{
+    min-height:100vh;
   }
 
   a{
     text-decoration:none;
     color:inherit;
+  }
+
+  ul,
+  ol{
+    list-style:none;
   }
 
   button{
