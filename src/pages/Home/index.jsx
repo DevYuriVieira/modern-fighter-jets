@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Navbar from "../../components/Navbar";
 import Hero from "../../components/Hero";
 import FeaturedAircraft from "../../components/FeaturedAircraft";
@@ -12,29 +14,58 @@ import {
   AircraftContainer,
   Grid,
   SectionTitle,
+  FilterContainer,
+  FilterButton,
 } from "./style";
 
 function Home() {
+  const [filter, setFilter] = useState("all");
+
+  const filteredFighters = fighters.filter((fighter) => {
+    if (filter === "all") return true;
+    return fighter.generation === filter;
+  });
+
   return (
     <Container>
       <Navbar />
 
       <Hero />
 
-      <FeaturedAircraft />
+      <section id="featured">
+        <FeaturedAircraft />
+      </section>
 
       <AircraftSection id="aircraft">
         <AircraftContainer>
-          <SectionTitle>
-            Combat Aircraft Database
-          </SectionTitle>
+          <SectionTitle>Combat Aircraft Database</SectionTitle>
+
+          <FilterContainer>
+            <FilterButton
+              $active={filter === "all"}
+              onClick={() => setFilter("all")}
+            >
+              All
+            </FilterButton>
+
+            <FilterButton
+              $active={filter === "4.5"}
+              onClick={() => setFilter("4.5")}
+            >
+              4.5 Gen
+            </FilterButton>
+
+            <FilterButton
+              $active={filter === "5th"}
+              onClick={() => setFilter("5th")}
+            >
+              5th Gen
+            </FilterButton>
+          </FilterContainer>
 
           <Grid>
-            {fighters.map((fighter) => (
-              <FighterCard
-                key={fighter.id}
-                fighter={fighter}
-              />
+            {filteredFighters.map((fighter) => (
+              <FighterCard key={fighter.id} fighter={fighter} />
             ))}
           </Grid>
         </AircraftContainer>

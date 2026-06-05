@@ -1,18 +1,47 @@
-import { Container, Content, Logo, Menu } from "./style";
+import { Link, useNavigate } from "react-router-dom";
+
+import {
+  Container,
+  Content,
+  Logo,
+  Menu,
+} from "./style";
 
 function Navbar() {
+  const navigate = useNavigate();
+
+  const handleAircraft = () => {
+    if (window.location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById("aircraft")?.scrollIntoView({
+          behavior: "smooth",
+        });
+      }, 100);
+    } else {
+      document.getElementById("aircraft")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <Container>
       <Content>
         <Logo>
-          MODERN <span>FIGHTER JETS</span>
+          <Link to="/">
+            MODERN <span>FIGHTER JETS</span>
+          </Link>
         </Logo>
 
         <Menu>
-          <a href="#home">Home</a>
-          <a href="#featured">Featured</a>
-          <a href="#aircraft">Aircraft</a>
-          <a href="#about">About</a>
+          <Link to="/">Home</Link>
+
+          <button onClick={handleAircraft}>
+            Aircraft
+          </button>
+
+          <Link to="/about">About</Link>
         </Menu>
       </Content>
     </Container>

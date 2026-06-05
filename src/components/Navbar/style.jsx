@@ -35,9 +35,17 @@ export const Logo = styled.h2`
   color: var(--text);
   font-size: 1rem;
   font-weight: 700;
+  cursor: pointer;
 
   span {
     color: var(--primary);
+  }
+
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
   }
 
   @media (min-width: 768px) {
@@ -50,16 +58,57 @@ export const Menu = styled.div`
 
   @media (min-width: 768px) {
     display: flex;
-    gap: 2rem;
+    gap: 2.2rem;
+    align-items: center;
   }
 
-  a {
+  a,
+  button {
+    position: relative;
+
     color: var(--text-secondary);
     font-weight: 500;
-    transition: 0.3s;
+    font-size: 0.95rem;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    transition: 0.3s ease;
   }
 
-  a:hover {
+  a::after,
+  button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 2px;
+
+    background: var(--primary);
+    transition: 0.3s ease;
+  }
+
+  a:hover,
+  button:hover {
     color: var(--text);
+    transform: translateY(-1px);
+  }
+
+  a:hover::after,
+  button:hover::after {
+    width: 100%;
+  }
+
+  /* 🔥 REMOVE O BRANCO DO FOCO/CLICK */
+  button:focus,
+  button:active {
+    outline: none;
+    background: transparent;
   }
 `;
